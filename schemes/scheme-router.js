@@ -62,7 +62,7 @@ router.post('/:id/steps', (req, res) => {
   const stepData = req.body;
   const { id } = req.params; 
 
-  Schemes.findById(id)
+  Schemes.findStepById(id)
   .then(scheme => {
     if (scheme) {
       Schemes.addStep(stepData, id)
